@@ -1,0 +1,17 @@
+32bit
+  set disassembly-flavor intel
+  define hook-stop
+  info registers
+  x/24wx $esp
+  x/5i $eip
+  end
+  
+  
+  
+ 64bit
+   set disassembly-flavor intel
+   define hook-stop
+   info registers
+   x/24wx $rsp
+   x/5i $rip
+   end
